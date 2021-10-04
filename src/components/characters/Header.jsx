@@ -14,7 +14,9 @@ export default function Header() {
           `${darkTheme ? styles.dark : !darkTheme ? styles.light : toggleTheme}
           ${darkTheme ? styles.hov : !darkTheme ? styles.lhov : toggleTheme}`
         }
-        to="/">Homepage</Link>
+        to="/"
+        aria-label="button">
+          Homepage</Link>
         <button onClick={toggleTheme}>
           Toggle Theme
         </button>

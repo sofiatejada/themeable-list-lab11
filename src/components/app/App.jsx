@@ -17,7 +17,8 @@ export default function App() {
           `${
             darkTheme ? styles.bgDark : 
               !darkTheme ? styles.bgLight : toggleTheme }`
-        }>
+        }
+        aria-label="main">
         <Header />
         <Switch>
           <Route exact path="/" component={CharacterList} />
