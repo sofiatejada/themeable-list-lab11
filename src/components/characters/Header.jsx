@@ -1,15 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useThemeUpdate } from '../../hooks/ThemeProvider';
+import { useThemeUpdate, useTheme } from '../../hooks/ThemeProvider';
+import styles from '../app/App.css';
 
 export default function Header() {
-  // const darkTheme = useTheme();
   const toggleTheme = useThemeUpdate();
+  const darkTheme = useTheme();
 
   return (
     <div>
       <header>
-        <Link to="/">Homepage</Link>
+        <Link className={
+          `${darkTheme ? styles.dark : !darkTheme ? styles.light : toggleTheme}
+          ${darkTheme ? styles.hov : !darkTheme ? styles.lhov : toggleTheme}`
+        }
+        to="/">Homepage</Link>
         <button onClick={toggleTheme}>
           Toggle Theme
         </button>

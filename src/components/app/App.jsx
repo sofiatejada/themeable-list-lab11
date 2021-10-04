@@ -5,7 +5,6 @@ import CharacterDetail from '../characters/CharacterDetail';
 import Header from '../characters/Header';
 import styles from './App.css';
 import { useTheme, useThemeUpdate } from '../../hooks/ThemeProvider';
-import lightLinks from '../app/';
 
 export default function App() {
   const darkTheme = useTheme();
@@ -13,7 +12,12 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className={`${styles.a}${darkTheme ? styles.bgDark : toggleTheme}`}>
+      <div 
+        className={
+          `${
+            darkTheme ? styles.bgDark : 
+              !darkTheme ? styles.bgLight : toggleTheme }`
+        }>
         <Header />
         <Switch>
           <Route exact path="/" component={CharacterList} />
