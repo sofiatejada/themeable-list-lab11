@@ -1,0 +1,11 @@
+/* Dark Theme*/
+.bgLight {
+  background-color: white;
+  color: black;
+}
+
+/* LightTheme */
+.bgDark {
+  background-color: black;
+  color: white;
+}
