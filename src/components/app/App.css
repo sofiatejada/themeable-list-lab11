@@ -1,0 +1,36 @@
+/* Dark Theme*/
+.bgDark {
+  background-color: black;
+  color: white;
+}
+
+.dark {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 5px;
+}
+
+.hov:hover {
+  background-color: white;
+  color: black;
+}
+
+
+/* LightTheme */
+.bgLight {
+  background-color: white;
+  color: black;
+}
+
+.light {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 5px;
+}
+
+.lhov:hover {
+  background-color: black;
+  color: white;
+}
